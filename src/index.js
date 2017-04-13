@@ -11,10 +11,6 @@ const Flash = {
     reducers: {
         flash
     },
-    FlashMessages,
-    addMessage,
-    addMessages,
-    removeMessage
 };
 
 export default Flash;

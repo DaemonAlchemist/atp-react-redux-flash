@@ -3,9 +3,10 @@
  */
 
 import {ADD_MESSAGE, ADD_MESSAGES, HIDE_MESSAGE} from "../actions/flash";
+import {o} from "atp-sugar";
 
 export default (state = [], action) =>
-    action.type.$switch({
+    o(action.type).switch({
         [ADD_MESSAGE]: () => state.concat(action.message),
         [ADD_MESSAGES]: () => state.concat(action.messages),
         [HIDE_MESSAGE]: () => state.slice(0, action.messageIndex).concat(state.slice(action.messageIndex + 1)),
