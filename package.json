@@ -15,7 +15,10 @@
     "patch": "npm version patch && npm run new-tag",
     "major-clean": "npm install && npm run major && rm -rf node_modules",
     "minor-clean": "npm install && npm run minor && rm -rf node_modules",
-    "patch-clean": "npm install && npm run patch && rm -rf node_modules"
+    "patch-clean": "npm install && npm run patch && rm -rf node_modules",
+    "check-dependencies": "dependency-check ./package.json && dependency-check ./package.json --unused",
+    "check": "ncu --packageFile package.json",
+    "evergreen": "ncu -ua --packageFile package.json"
   },
   "repository": {
     "type": "git",
@@ -24,13 +27,11 @@
   "author": "Andrew Wittrock",
   "license": "MIT",
   "dependencies": {
-    "atp-redux": "git+https://git@github.com/DaemonAlchemist/atp-redux.git",
     "atp-sugar": "git+https://git@github.com/DaemonAlchemist/atp-sugar.git",
+    "dependency-check": "^2.9.1",
     "react": "^15.6.1",
     "react-bootstrap": "^0.31.2",
-    "react-dom": "^15.6.1",
-    "react-redux": "^5.0.6",
-    "redux": "^3.7.2"
+    "react-redux": "^5.0.6"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
