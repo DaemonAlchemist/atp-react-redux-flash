@@ -7,7 +7,7 @@ import {Provider} from "react-redux";
 
 import flash from "./reducer/flash";
 import FlashMessages from "./containers/flash-messages";
-import {addMessage, addMessages, removeMessage} from "./reducer/flash";
+import {addMessage, addMessages, removeMessage, addError, addWarning, addSuccess, addInfo} from "./reducer/flash";
 
 //Module definition
 const Flash = {
@@ -18,4 +18,4 @@ const Flash = {
 export default Flash;
 
 //Other exports
-export {FlashMessages, addMessage, addMessages, removeMessage};
+export {FlashMessages, addMessage, addMessages, removeMessage, addError, addWarning, addSuccess, addInfo};

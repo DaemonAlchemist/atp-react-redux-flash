@@ -14,6 +14,11 @@ export const addMessage = message => ({type: ADD_MESSAGE, message});
 export const addMessages = messages => ({type: ADD_MESSAGES, messages});
 export const removeMessage = messageIndex => ({type: HIDE_MESSAGE, messageIndex});
 
+export const addError = text => addMessage({type: "error", text});
+export const addWarning = text => addMessage({type: "warning", text});
+export const addSuccess = text => addMessage({type: "success", text});
+export const addInfo = text => addMessage({type: "info", text});
+
 //Reducer
 export default (state = [], action) =>
     o(action.type).switch({
