@@ -1,6 +1,3 @@
-/**
- * Created by Andy on 8/17/2017.
- */
 
 import React from "react";
 import {Alert, Col, Row} from "react-bootstrap";
